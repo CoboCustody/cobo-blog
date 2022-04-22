@@ -27,7 +27,7 @@ async function main() {
   await exp.init();
 
   let pair = await exp.pair();
-  const bank = await hre.ethers.getContractAt("IBank", RabbitBankAddress, signer);
+  const bank = await hre.ethers.getContractAt("IBank", RabbitBankAddress);
 
   let data = hre.ethers.utils.defaultAbiCoder.encode(
     ['address', 'uint', 'uint', 'address', 'uint'],
